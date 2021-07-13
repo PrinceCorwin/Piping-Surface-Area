@@ -2,7 +2,11 @@
 <html lang="en">
   <head>
     <title>Surface Area Calculator</title>
-    <link rel="shortcut icon" type="image/ico" href="images/favicon/favicon.ico" />
+    <link
+      rel="shortcut icon"
+      type="image/ico"
+      href="images/favicon/favicon.ico"
+    />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -20,9 +24,9 @@
       sizes="16x16"
       href="images/favicon/favicon-16x16.png"
     />
-   <!-- access to webmanifest currently blocked on my site. Need to resolve -->
-   <link rel="manifest" href="https://amalfimakesit.com/site.webmanifest" />
-    
+    <!-- access to webmanifest currently blocked on my site. Need to resolve -->
+    <link rel="manifest" href="https://amalfimakesit.com/site.webmanifest" />
+
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- social media display meta tags -->
@@ -35,14 +39,17 @@
       property="og:image"
       content="https://amalfimakesit.com/images/SocMedThumbnails/surfacePreview.png"
     />
-    <meta property="og:url" content="https://amalfimakesit.com/apps/pipe-surface-area" />
+    <meta
+      property="og:url"
+      content="https://amalfimakesit.com/apps/pipe-surface-area"
+    />
     <meta name="twitter:card" content="summary_large_image" />
     <script
       src="https://kit.fontawesome.com/6c80d95586.js"
       crossorigin="anonymous"
     ></script>
 
-    <link rel="stylesheet" href="surface-style.css" />
+    <link rel="stylesheet" href="style.css" />
 
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
@@ -51,41 +58,64 @@
     />
   </head>
   <body>
+    <!-- help menu -->
+    <div id="help">
+      <div id="help-title">
+        <div>
+          Calculates the long point and throat dimensions for pipe dummy legs
+          attached to pipe or elbow
+        </div>
+        <i class="far fa-times-circle"></i>
+      </div>
+      <div class="help-desc">
+        <ul id="helpList">
+          <li>
+            Enter header and dummy leg pipe/fitting NPS in decimal inches (
+            1.25, 2, 3.5, 12, etc )
+          </li>
+          <li>
+            For "L" dimension, any unneeded fields may be left blank ( you don't
+            have to enter a "0" )
+          </li>
+          <li>
+            Weld Gaps are not conidered in dimension calculations. If gaps are
+            required, subtract gap length (usually 1/16<sup>th</sup> inch) from
+            long point and throat
+          </li>
+          <li>
+            NOTE: All calculations rounded to the nearest 1/16<sup>th</sup> of
+            an inch
+          </li>
+        </ul>
+        <div>DUMMY LEG CALCULATOR</div>
+        <div class="version">Version 1.2.7.21</div>
+        <div><small>&copy; Copyright 2019, Steve Corwin Amalfitano</small></div>
+      </div>
+    </div>
     <nav>
       <div class="hamburger">
         <div class="line"></div>
         <div class="line"></div>
         <div class="line"></div>
       </div>
-
       <ul class="nav-links">
-        <li id="gallery">
-          <a
-            href="https://amalfimakesit.com"
-            >HOME</a
-          >
-        </li>
-      
+        <div id="home">
+          <a href="https://amalfimakesit.com/">HOME</a>
+        </div>
         <li>
-          <a href="../elbow-trim-angle/index.html"
-            >Trim Angle</a
-          >
+          <a href="../elbow-trim-angle">Trim Angle</a>
         </li>
         <li>
-          <a href="../Dummy-Leg-Calculator/index.html"
-            >Dummy Leg</a
-          >
+          <a href="../Dummy-Leg-Calculator/">Dummy Leg</a>
         </li>
-        <li id="float"><div>
-        <a href="help.html" target="_blank"
-        ><i class="fa fa-fw fa-question-circle"></i> Help</a
-        >
-        
-        <a href="mailto:amalfi615@gmail.com"
-        ><i class="fa fa-fw fa-envelope"></i> Contact</a
-        >
-      </div></li>
-        
+        <li id="hide-btn">
+          <div id="hide-btn-txt">Hide Images</div>
+        </li>
+        <li id="help-btn">
+          <div>
+            About
+            <i class="fas fa-info-circle"></i>
+          </div>
         </li>
       </ul>
     </nav>
@@ -106,7 +136,7 @@
           <a href="https://www.facebook.com/AmalfiMakesIt"
             ><i class="fab fa-facebook fa-1x"></i
           ></a>
-    
+
           <a href="https://www.instagram.com/amalfi.makes.it/"
             ><i class="fab fa-instagram fa-1x"></i
           ></a>
@@ -127,7 +157,7 @@
         /></a>
       </div>
     </footer>
-    
-    <script src="surface-script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
